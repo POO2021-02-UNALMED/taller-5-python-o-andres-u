@@ -1,6 +1,3 @@
-import zooAnimales
-
-
 class Animal:
     _totalAnimales = 0
 
@@ -29,12 +26,12 @@ class Animal:
 
     @staticmethod
     def totalPorTipo():
-        return f'''
-            Mamiferos: {zooAnimales.Mamifero.cantidadMamiferos()}\n
-            Aves: {zooAnimales.Ave.cantidadAves()}\n
-            Reptiles: {zooAnimales.Reptil.cantidadReptiles()}\n
-            Anfibios: {zooAnimales.Anfibio.cantidadAnfibios()}\n
-        '''
+        from zooAnimales.mamifero import Mamifero
+        from zooAnimales.ave import Ave
+        from zooAnimales.reptil import Reptil
+        from zooAnimales.anfibio import Anfibio
+        from zooAnimales.pez import Pez
+        return f"Mamiferos : {Mamifero.cantidadMamiferos()}\nAves : {Ave.cantidadAves()}\nReptiles : {Reptil.cantidadReptiles()}\nPeces : {Pez.cantidadPeces()}\nAnfibios : {Anfibio.cantidadAnfibios()}"
 
     def toString(self):
         message = f"Mi nombre es {self._nombre}, tengo una edad de {self._edad}, habito en {self._habitat} y mi genero es {self._genero}"

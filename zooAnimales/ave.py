@@ -16,7 +16,7 @@ class Ave(Animal):
 
     @classmethod
     def cantidadAves(cls):
-        len(cls._listado)
+        return len(cls._listado)
 
     def movimiento(self):
         return "flying"
@@ -24,13 +24,9 @@ class Ave(Animal):
     @classmethod
     def crearHalcon(cls, nombre, edad, genero):
         Ave.halcones += 1
-        halcon = Ave(colorPlumas="cafe glorioso", habitat="montanas", nombre=nombre, edad=edad, genero=genero)
-        cls._listado.append(halcon)
-        return halcon
+        return Ave(colorPlumas="cafe glorioso", habitat="montanas", nombre=nombre, edad=edad, genero=genero)
 
     @classmethod
     def crearAguila(cls, nombre, edad, genero):
         Ave.aguilas += 1
-        aguila = Ave(colorPlumas="blanco y amarillo", habitat="montanas", nombre=nombre, edad=edad, genero=genero)
-        cls._listado.append(aguila)
-        return aguila
+        return Ave(colorPlumas="blanco y amarillo", habitat="montanas", nombre=nombre, edad=edad, genero=genero)
