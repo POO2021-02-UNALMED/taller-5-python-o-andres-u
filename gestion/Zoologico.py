@@ -10,3 +10,6 @@ class Zoologico:
 
     def cantidadTotalAnimales(self):
         return sum([len(animales) for animales in self._zonas])
+
+    def getNombre(self):
+        return self._nombre
