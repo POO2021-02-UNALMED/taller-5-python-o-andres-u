@@ -9,4 +9,4 @@ class Zoologico:
         self._zonas.append(zona)
 
     def cantidadTotalAnimales(self):
-        return 0
+        return sum([len(animales) for animales in self._zonas])
