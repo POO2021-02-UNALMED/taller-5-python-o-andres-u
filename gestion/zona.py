@@ -16,3 +16,6 @@ class Zona:
 
     def getZoo(self):
         return self._zoo
+
+    def getAnimales(self):
+        return self._animales

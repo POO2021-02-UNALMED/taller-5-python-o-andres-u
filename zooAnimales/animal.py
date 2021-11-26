@@ -27,17 +27,18 @@ class Animal:
     def movimiento(self):
         return "moving"
 
-    def totalPorTipo(self):
+    @staticmethod
+    def totalPorTipo():
         return f'''
-            Mamiferos: ${zooAnimales.Mamifero.cantidadMamiferos()}
-            Aves: ${zooAnimales.Ave.cantidadAves()}
-            Reptiles: ${zooAnimales.Reptil.cantidadReptiles()}
-            Anfibios: ${zooAnimales.Anfibio.cantidadAnfibios()}
+            Mamiferos: {zooAnimales.Mamifero.cantidadMamiferos()}\n
+            Aves: {zooAnimales.Ave.cantidadAves()}\n
+            Reptiles: {zooAnimales.Reptil.cantidadReptiles()}\n
+            Anfibios: {zooAnimales.Anfibio.cantidadAnfibios()}\n
         '''
 
-    def __str__(self):
-        message = f"Mi nombre es ${self._nombre}, tengo una edad de ${self._edad}, habito en ${self._habitat} y mi genero es ${self._genero}"
+    def toString(self):
+        message = f"Mi nombre es {self._nombre}, tengo una edad de {self._edad}, habito en {self._habitat} y mi genero es {self._genero}"
         if self._zona:
-            return f"${message}, la zona en la que me ubico es {self._zona.getNombre()}, en el ${self._zona.getZoo().getNombre()}"
+            return f"{message}, la zona en la que me ubico es {self._zona.getNombre()}, en el {self._zona.getZoo().getNombre()}"
         else:
             return message
