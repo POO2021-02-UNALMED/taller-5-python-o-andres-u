@@ -1,7 +1,4 @@
-from zooAnimales.anfibio import Anfibio
-from zooAnimales.ave import Ave
-from zooAnimales.mamifero import Mamifero
-from zooAnimales.reptil import Reptil
+import zooAnimales
 
 
 class Animal:
@@ -15,15 +12,27 @@ class Animal:
         self._zona = None
         self._totalAnimales += 1
 
+    def getNombre(self):
+        return self._nombre
+
+    def getEdad(self):
+        return self._edad
+
+    def getHabitat(self):
+        return self._habitat
+
+    def getGenero(self):
+        return self._genero
+
     def movimiento(self):
         return "moving"
 
     def totalPorTipo(self):
         return f'''
-            Mamiferos: ${Mamifero.cantidadMamiferos()}
-            Aves: ${Ave.cantidadAves()}
-            Reptiles: ${Reptil.cantidadReptiles()}
-            Anfibios: ${Anfibio.cantidadAnfibios()}
+            Mamiferos: ${zooAnimales.Mamifero.cantidadMamiferos()}
+            Aves: ${zooAnimales.Ave.cantidadAves()}
+            Reptiles: ${zooAnimales.Reptil.cantidadReptiles()}
+            Anfibios: ${zooAnimales.Anfibio.cantidadAnfibios()}
         '''
 
     def __str__(self):
