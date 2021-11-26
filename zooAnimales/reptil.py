@@ -12,6 +12,12 @@ class Reptil(Animal):
         self._largoCola = largoCola
         Reptil._listado.append(self)
 
+    def getColorEscamas(self):
+        return self._colorEscamas
+
+    def getLargoCola(self):
+        return self._largoCola
+
     @classmethod
     def cantidadReptiles(cls):
         return len(cls._listado)

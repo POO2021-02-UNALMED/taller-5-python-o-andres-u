@@ -12,6 +12,12 @@ class Pez(Animal):
         self._cantidadAletas = cantidadAletas
         Pez._listado.append(self)
 
+    def getColorEscamas(self):
+        return self._colorEscamas
+
+    def getCantidadAletas(self):
+        return self._cantidadAletas
+
     @classmethod
     def cantidadPeces(cls):
         return len(cls._listado)
