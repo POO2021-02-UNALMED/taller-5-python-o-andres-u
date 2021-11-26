@@ -20,9 +20,16 @@ class Reptil(Animal):
         return "reptar"
 
     @classmethod
-    def crearIguana(cls):
-        pass
+    def crearIguana(cls, nombre, edad, genero):
+        cls.iguanas += 1
+        iguana = Reptil(colorEscamas="verde", largoCola=3, habitat="humedal", nombre=nombre, edad=edad, genero=genero)
+        cls._listado.append(iguana)
+        return iguana
 
     @classmethod
-    def crearSerpiente(cls):
-        pass
+    def crearSerpiente(cls, nombre, edad, genero):
+        cls.serpientes += 1
+        serpiente = Reptil(colorEscamas="blanco", largoCola=1, habitat="jungla", nombre=nombre, edad=edad, genero=genero)
+        cls._listado.append(serpiente)
+        return serpiente
+
